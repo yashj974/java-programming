@@ -1,22 +1,22 @@
 //The question bank specifically asks for displaying a 2D integer array using nested loops.
 
-class Array2D {
+class Matrix {
+    int[][] a = {
+        {1, 2, 3},
+        {4, 5, 6}
+    };
 
-    public static void main(String[] args) {
-
-        int[][] numbers = {
-            {10, 20, 30},
-            {40, 50, 60},
-            {70, 80, 90}
-        };
-
-        for(int i = 0; i < numbers.length; i++) {
-
-            for(int j = 0; j < numbers[i].length; j++) {
-                System.out.print(numbers[i][j] + " ");
+    void display() {
+        for (int i = 0; i < a.length; i++) {
+            for (int j = 0; j < a[i].length; j++) {
+                System.out.print(a[i][j] + " ");
             }
-
             System.out.println();
         }
+    }
+
+    public static void main(String[] args) {
+        Matrix m = new Matrix();
+        m.display();
     }
 }
